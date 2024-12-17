@@ -17,10 +17,9 @@ const heroData = [
   },
   {
     id: 2,
-    title: "Notícia 2: Evento importante!",
     imageUrl: noticia2,
     newsLink: "https://exemplo.com/noticia2",
-  },
+  },  
   {
     id: 3,
     title: "Notícia 3: Atualização de mercado!",

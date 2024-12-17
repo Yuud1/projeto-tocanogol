@@ -1,6 +1,8 @@
 // NewsDetail.tsx
 import React from "react";
 import { useParams } from "react-router-dom";
+import Footer from "../components/footer";
+import Header from "../components/header";
 import noticia1 from "../assets/images/noticia1.png";
 import noticia2 from "../assets/images/noticia2.png";
 import noticia3 from "../assets/images/noticia3.png";
@@ -26,7 +28,7 @@ const heroData = [
   },
 ];
 
-const NewsDetail = () => {
+const News = () => {
   // Captura o ID da notícia da URL
   const { id } = useParams<{ id: string }>();
   // Encontra a notícia com o ID correspondente
@@ -37,12 +39,16 @@ const NewsDetail = () => {
   }
 
   return (
+    <>
+    <Header />
     <div className="news-detail">
       <h1>{newsItem.title}</h1>
       <img src={newsItem.imageUrl} alt={newsItem.title} />
       <p>{newsItem.content}</p>
     </div>
+    <Footer />
+    </>
   );
 };
 
-export default NewsDetail;
+export default News;

@@ -1,0 +1,47 @@
+/* Container principal com grid */
+.news-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas iguais */
+    gap: 20px; /* Espaço entre os itens */
+    padding: 20px; /* Espaçamento interno */
+  }
+  
+  /* Estilo de cada item da notícia */
+  .news-item {
+    background-color: #f9f9f9;
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Esconde conteúdo que passar dos limites */
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .news-item:hover {
+    transform:scale(1.02);
+  }
+  
+  .news-item img {
+    width: 100%;
+    height: 200px; /* Altura fixa */
+    object-fit: cover; /* Ajusta a imagem mantendo a proporção */
+  }
+  
+  .news-item h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: #333;
+  }
+
+  @media (max-width: 1150px) {
+    .news-grid-container {
+      grid-template-columns: repeat(2, 1fr); /* 2 colunas para tablets */
+    }
+  }
+  
+  @media (max-width: 800px) {
+    .news-grid-container {
+      grid-template-columns: 1fr; /* 1 coluna para dispositivos móveis */
+    }
+  }
+  
+  
