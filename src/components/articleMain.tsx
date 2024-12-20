@@ -10,7 +10,7 @@ import image6 from "../assets/images/article6.jpg";
 
 // Dados das notícias
 const newsData = [
-  { id: 1, title: "Notícia 1", imageUrl: image1 },
+  { id: 1, title: "Sao paulo compra neymar", imageUrl: image1 },
   { id: 2, title: "Notícia 2", imageUrl: image2 },
   { id: 3, title: "Notícia 3", imageUrl: image3 },
   { id: 4, title: "Notícia 4", imageUrl: image4 },
@@ -22,8 +22,9 @@ const NewsGrid = () => {
   return (
     <div className="container news-grid-container">
       {newsData.map((news) => (
-        <div key={news.id} className="news-item">
+        <div key={news.id} className="news-item">   
           <img src={news.imageUrl} alt={news.title} />
+          <h3>{news.title}</h3>
         </div>
       ))}
     </div>

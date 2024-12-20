@@ -3,9 +3,11 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import Footer from "../components/footer";
 import Header from "../components/header";
+import "../styles/news.css"
 import noticia1 from "../assets/images/noticia1.png";
 import noticia2 from "../assets/images/noticia2.png";
 import noticia3 from "../assets/images/noticia3.png";
+import AdvertisingMain from "../components/advertisingMain";
 
 const heroData = [
   {
@@ -40,6 +42,7 @@ const News = () => {
 
   return (
     <>
+    <AdvertisingMain />
     <Header />
     <div className="news-detail">
       <h1>{newsItem.title}</h1>

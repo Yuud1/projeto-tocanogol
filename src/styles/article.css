@@ -8,29 +8,38 @@
   
   /* Estilo de cada item da notícia */
   .news-item {
-    background-color: #f9f9f9;
-    border-radius: 8px; /* Bordas arredondadas */
+    position: relative; /* Permite que elementos internos usem position relativa ao item */
+    border-radius: 8px;
+    overflow: hidden; /* Garante que o conteúdo não ultrapasse os limites */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    overflow: hidden; /* Esconde conteúdo que passar dos limites */
-    text-align: center;
     transition: transform 0.3s ease-in-out;
   }
   
   .news-item:hover {
-    transform:scale(1.02);
+    transform: scale(1.02);
   }
   
   .news-item img {
     width: 100%;
-    height: 200px; /* Altura fixa */
-    object-fit: cover; /* Ajusta a imagem mantendo a proporção */
+    height: 200px;
+    object-fit: cover;
   }
   
+  /* Estilo do título (h3) sobre a imagem */
   .news-item h3 {
-    margin: 10px 0;
+    position: absolute;
+    bottom: 0; /* Fixa o título na parte inferior da imagem */
+    width: 100%; /* Faz o título ocupar toda a largura do contêiner */
+    margin: 0; /* Remove margens */
+    padding: 10px; /* Adiciona espaçamento interno */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0)); /* Fundo semitransparente */
+    color: #fff; /* Cor do texto */
     font-size: 1.2rem;
-    color: #333;
+    font-family: sans-serif;
+    text-align: center; /* Centraliza o texto */
+    z-index: 1; /* Garante que o título fique acima da imagem */
   }
+  
 
   @media (max-width: 1150px) {
     .news-grid-container {
