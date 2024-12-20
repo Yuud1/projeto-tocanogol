@@ -3,7 +3,6 @@ body {
     margin: 0;
     padding-top: 80px; /* Ajuste para a altura do seu header */
   }
-  
   /* Para dispositivos móveis */
   @media (max-width: 1150px) {
     body {
