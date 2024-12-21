@@ -1,0 +1,76 @@
+/* Estilo geral para a página de notícias */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  /* Container principal para a página */
+  .detail-page {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #F9F9F9;
+    border-radius: 8px;
+  }
+  
+  /* Título da notícia */
+  .detail-page h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #222;
+    text-align: center;
+  }
+  
+  /* Imagem da notícia */
+  .detail-page img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  /* Conteúdo do texto */
+  .detail-page p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    text-align: justify;
+  }
+  
+  /* Estilo para links no conteúdo (caso tenha) */
+  .detail-page a {
+    color: #007BFF;
+    text-decoration: none;
+  }
+  
+  .detail-page a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Estilo para Header e Footer */
+  header, footer {
+    background-color: #222;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .detail-page {
+      padding: 15px;
+    }
+  
+    .detail-page h1 {
+      font-size: 1.5rem;
+    }
+  
+    .detail-page p {
+      font-size: 0.9rem;
+    }
+  }
+  
