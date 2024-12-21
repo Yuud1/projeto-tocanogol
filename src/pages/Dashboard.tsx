@@ -30,7 +30,7 @@ const Dashboard: React.FC = () => {
       <div>
         <h1 className="dashboard-title">Bem-vindo ao Dashboard</h1>
         <div className="dashboard-buttons">
-          <button onClick={() => handleRedirect("/home")}>Home</button>
+          <button onClick={() => handleRedirect("/")}>Home</button>
           <button onClick={() => handleRedirect("/users")}>Usuários</button>
           <button onClick={() => handleRedirect("/posts")}>Posts</button>
           <button onClick={() => handleRedirect("/ads")}>Propagandas</button>
