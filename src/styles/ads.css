@@ -1,0 +1,47 @@
+.ads-page {
+    padding: 20px;
+  }
+  
+  .ads-container {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .ads-sidebar,
+  .ads-main {
+    flex: 1;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  
+  .ad-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .ad-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .create-ad-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .create-ad-button:hover {
+    background-color: #0056b3;
+  }
+  

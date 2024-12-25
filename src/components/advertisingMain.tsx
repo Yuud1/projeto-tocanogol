@@ -8,7 +8,7 @@ const advertisingMain = () => {
       id: 1,
       title: "Oferta imperdível do TiggoSX",
       imageUrl: noticia1,
-      newsLink: "https://exemplo.com/propaganda1.jpg",
+      newsLink: "https://caoachery.com.br/",
       empresa: 'Nisa CAOA Chery',
       description: "o SUV que é a combinação perfeita entre a tecnologia de última geração e o maior conforto",
     },

@@ -28,7 +28,7 @@
 
 .advertising-image {
   width: 100%;
-  height: auto; /* Garante que a proporção da imagem seja mantida */
+  height: auto;
   border-radius: 8px;
 }
 
@@ -44,7 +44,7 @@
 .info-container h2 {
   font-size: 1.5vw;
   font-weight: bold;
-  margin: 1vw 0;
+  margin: 0.5vw 0;
 }
 
 .info-container p {
@@ -63,11 +63,6 @@
   border: none;
 }
 
-
-.redirecionamento h3 {
-  font-size: 1.3vw;
-} 
-
 .info-container a {
   font-size: 1.1vw;
   color: black;
@@ -83,4 +78,20 @@
   display: flex;
   justify-content: space-between; /* Ajusta automaticamente o espaço */
   width: 95%; /* Garante responsividade */
-} 
+}
+
+.redirecionamento h3 {
+  font-size: 1.3vw;
+}
+
+@media (max-width: 1150px) {
+  .info-container {
+    gap: 1vw;
+  }
+}
+
+@media (max-width: 800px) {
+  .info-container {
+    gap: 0vw;
+}
+}

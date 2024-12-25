@@ -21,6 +21,12 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+.icon {
+  width: 20px; /* Defina o tamanho desejado do ícone */
+  height: 20px;
+  margin-right: 8px; /* Espaçamento entre o ícone e o texto */
+}
+
 .logo {
   max-width: 140px;
 }
@@ -49,13 +55,14 @@
   display: none;
   position: absolute;
   top: 100%;
-  left: -30%;
+  left: 0; /* Alinha o menu à esquerda */
   background-color: white;
   color: black;
   padding: 10px;
   z-index: 10;
   border-radius: 5px;
-  min-width: 150px;
+  min-width: 200px; /* Aumente o valor para garantir que não quebre */
+  box-sizing: border-box; /* Garante que o padding não afete o tamanho */
 }
 
 .dropdown-menu a {
@@ -66,6 +73,7 @@
   font-weight: bold;
   font-family: sans-serif;
   transition: background-color 0.3s ease;
+  text-align: left; /* Garante que o texto fique alinhado à esquerda */
 }
 
 .dropdown-menu.open {
@@ -199,6 +207,10 @@
     padding: 15px 50px;
   }
 
+  .logo {
+    max-width: 120px;
+  }
+
   .header__center {
     display: none; /* Esconde os elementos centrais */
   }
@@ -234,6 +246,15 @@
 }
 
 @media (max-width: 800px) {
+  .logo {
+    max-width: 100px;
+  }
+
+  .hamburger-icon {
+    width: 25px;
+    height: 25px;
+  }
+  
   .header {
     padding: 15px 40px;
   }

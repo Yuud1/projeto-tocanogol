@@ -4,8 +4,15 @@ import logo from "../assets/images/logo2.png";
 import palmas from "../assets/images/palmas.png";
 import brasil from "../assets/images/brasil.jpg";
 import hamburguer from "../assets/icons/hamburguer.png";
+import basqueteIcon from "../assets/icons/variante-de-bola-de-basquete.png";
+import voleiIcon from "../assets/icons/volei.png";
+import tenisIcon from "../assets/icons/raquete-de-tenis.png";
+import regionalIcon from "../assets/icons/pontos.png";
+import internacionalIcon from "../assets/icons/marketing-global.png";
+import nacionalIcon from "../assets/icons/brasil.png";
 import { FiChevronDown, FiSearch } from "react-icons/fi";
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -28,7 +35,10 @@ const Header: React.FC = () => {
     <>
       <header className="header">
         <div className="header__left">
-          <img src={logo} alt="Logo do site" className="logo" />
+          {/* Usando Link para redirecionar para a home ao clicar na logo */}
+          <Link to="/">
+            <img src={logo} alt="Logo do site" className="logo" />
+          </Link>
         </div>
         <div className="header__center">
           <div className="dropdown">
@@ -36,9 +46,15 @@ const Header: React.FC = () => {
               Esportes <FiChevronDown size={14} />
             </button>
             <div className={`dropdown-menu ${isEsportesOpen ? "open" : ""}`}>
-              <a href="#basquete">Basquete</a>
-              <a href="#volei">Vôlei</a>
-              <a href="#tenis">Tênis</a>
+              <a href="#basquete">
+                <img src={basqueteIcon} alt="Basquete" className="icon" /> Basquete
+              </a>
+              <a href="#volei">
+                <img src={voleiIcon} alt="Vôlei" className="icon" /> Vôlei
+              </a>
+              <a href="#tenis">
+                <img src={tenisIcon} alt="Tênis" className="icon" /> Tênis
+              </a>
             </div>
           </div>
           <div className="dropdown">
@@ -46,9 +62,15 @@ const Header: React.FC = () => {
               Futebol <FiChevronDown size={14} />
             </button>
             <div className={`dropdown-menu ${isFutebolOpen ? "open" : ""}`}>
-              <a href="#internacional">Internacional</a>
-              <a href="#nacional">Nacional</a>
-              <a href="#regional">Regional</a>
+              <a href="#internacional">
+                <img src={internacionalIcon} alt="Futebol" className="icon" /> Internacional
+              </a>
+              <a href="#nacional">
+                <img src={nacionalIcon} alt="Futebol" className="icon" /> Nacional
+              </a>
+              <a href="#regional">
+                <img src={regionalIcon} alt="Futebol" className="icon" /> Regional
+              </a>
             </div>
           </div>
           <div className="search-bar">
@@ -88,9 +110,15 @@ const Header: React.FC = () => {
             Esportes <FiChevronDown size={14} />
           </button>
           <div className={`dropdown-menu ${isEsportesOpen ? "open" : ""}`}>
-            <a href="#basquete">Basquete</a>
-            <a href="#volei">Vôlei</a>
-            <a href="#tenis">Tênis</a>
+            <a href="#basquete">
+              <img src={basqueteIcon} alt="Basquete" className="icon" /> Basquete
+            </a>
+            <a href="#volei">
+              <img src={voleiIcon} alt="Vôlei" className="icon" /> Vôlei
+            </a>
+            <a href="#tenis">
+              <img src={tenisIcon} alt="Tênis" className="icon" /> Tênis
+            </a>
           </div>
         </div>
         <div className="dropdown">
@@ -98,9 +126,15 @@ const Header: React.FC = () => {
             Futebol <FiChevronDown size={14} />
           </button>
           <div className={`dropdown-menu ${isFutebolOpen ? "open" : ""}`}>
-            <a href="#internacional">Internacional</a>
-            <a href="#nacional">Nacional</a>
-            <a href="#regional">Regional</a>
+            <a href="#internacional">
+              <img src={internacionalIcon} alt="Futebol" className="icon" /> Internacional
+            </a>
+            <a href="#nacional">
+              <img src={nacionalIcon} alt="Futebol" className="icon" /> Nacional
+            </a>
+            <a href="#regional">
+              <img src={regionalIcon} alt="Futebol" className="icon" /> Regional
+            </a>
           </div>
         </div>
       </nav>

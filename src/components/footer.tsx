@@ -1,6 +1,8 @@
+
 import React from "react";
-import "../styles/footer.css";
 import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import "../styles/footer.css"
 
 const Footer: React.FC = () => {
   return (
@@ -17,16 +19,13 @@ const Footer: React.FC = () => {
           <h2>Links Úteis</h2>
           <ul>
             <li>
-              <a href="#sobre">Sobre</a>
+              <Link to="/sobre">Sobre</Link>
             </li>
             <li>
-              <a href="#termos">Termos de Uso</a>
+              <Link to="/termos">Termos de Uso</Link>
             </li>
             <li>
-              <a href="#privacidade">Política de Privacidade</a>
-            </li>
-            <li>
-              <a href="#contato">Contato</a>
+              <Link to="/privacidade">Política de Privacidade</Link>
             </li>
           </ul>
         </div>
