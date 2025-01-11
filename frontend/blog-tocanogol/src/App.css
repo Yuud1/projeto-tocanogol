@@ -1,7 +1,7 @@
 /* index.css ou App.css */
 body {
     margin: 0;
-    padding-top: 70px;
+    padding-top: 80px;
   }
   /* Para dispositivos móveis */
   @media (max-width: 1150px) {

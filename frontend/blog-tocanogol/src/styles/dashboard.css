@@ -1,11 +1,8 @@
-/* Dashboard.css */
-
-/* Header */
 .dashboard-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 2%;
+  padding: 20px 2%;
   background-color: black;
   color: white;
 }

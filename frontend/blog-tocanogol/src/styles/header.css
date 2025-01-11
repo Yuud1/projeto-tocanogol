@@ -78,7 +78,7 @@
 }
 
 .dropdown-menu.open {
-  display: block !important;
+  display: block;
 }
 
 .dropdown-button svg {
@@ -163,7 +163,7 @@
 
 .menu-hamburger.open {
   right: 0;
-  margin-top: 80px;
+  margin-top: 70px;
 }
 
 .menu-hamburger .dropdown-menu {
@@ -205,7 +205,7 @@
 
 @media (max-width: 1150px) {
   .header {
-    padding: 15px 50px;
+    padding: 17px 50px;
   }
 
   .logo {
@@ -257,7 +257,7 @@
   }
   
   .header {
-    padding: 15px 40px;
+    padding: 20px 40px;
   }
 
   .search-bar {

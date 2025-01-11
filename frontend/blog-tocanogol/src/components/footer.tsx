@@ -7,7 +7,9 @@ import "../styles/footer.css"
 const Footer: React.FC = () => {
   return (
     <footer className="footer">
+
       <div className="footer__container">
+
         <div className="footer__about">
           <h2>Sobre Nós</h2>
           <p>
@@ -29,6 +31,7 @@ const Footer: React.FC = () => {
             </li>
           </ul>
         </div>
+
         <div className="footer__social">
           <h2>Redes Sociais</h2>
           <div className="social-icons">
@@ -62,10 +65,15 @@ const Footer: React.FC = () => {
             </a>
           </div>
         </div>
+        
       </div>
+      <div className="divider-line-footer"></div>
       <div className="footer__bottom">
-        <p>&copy; 2024 TocanoGol. Todos os direitos reservados.</p>
+        <div className="enderecoFooter"><p><span>endereço:</span> alameda amazonas, 594, terreo mezanino, alphaville industrial<br />cep: 06454-070 - palmas-to</p></div>
+        <div><p>layout e desenvolvimento <span>Hatcorp</span> <br/> tocanogol 2024 | todos os direitos reservados.</p></div>
+        <div className="razaoSocialFooter"><p><span>razão social:</span> super 25 comércio eletronico de oculos e acessórios s.a.<br />cnpj: 14.439.371/0002-60</p></div>
       </div>
+
     </footer>
   );
 };

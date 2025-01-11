@@ -32,7 +32,7 @@
   
   .footer__about p {
     font-size: 14px;
-    padding: 20px 35px;
+    padding: 20px 40px;
     line-height: 1.6;
     text-align: center;
   }
@@ -80,11 +80,42 @@
   }
   
   .footer__bottom {
-    text-align: center;
-    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 50px;
     font-size: 12px;
     color: #ccc;
+    gap: 40px;
   }
+
+  .razaoSocialFooter {
+    text-align: right;
+  }
+
+  .enderecoFooter {
+    text-align: left;
+  }
+
+  .divider-line-footer {
+    display: flex;
+    width: 93%;
+    height: 1px;
+    align-items: center;
+    background-color: #555555;
+    border: none;
+    margin: 0 auto;
+  }
+
+  .footer__bottom p {
+    line-height: 16px;
+  }
+
+  .footer__bottom span {
+    color: white;
+    font-weight: 600;
+  }
+  
   
   @media (max-width: 768px) {
     .footer__container {
@@ -96,10 +127,27 @@
     .footer__links,
     .footer__social {
       text-align: center;
+      padding: 15px 60px;
     }
 
     .social-icons {
         justify-content: center;
+    }
+
+    .divider-line-footer {
+      width: 80%; /* Reduz a largura em telas menores */
+    }
+  
+    .footer__bottom {
+      flex-direction: column; /* Empilha os elementos verticalmente */
+      align-items: center;
+      text-align: center;
+      gap: 25px;
+    }
+  
+    .enderecoFooter,
+    .razaoSocialFooter {
+      text-align: center; /* Centraliza o texto */
     }
   }
   

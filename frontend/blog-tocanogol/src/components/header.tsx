@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "../styles/header.css";
 import logo from "../assets/images/logo2.png";
 import palmas from "../assets/images/palmas.png";
@@ -19,6 +19,10 @@ const Header: React.FC = () => {
   const [isEsportesOpen, setIsEsportesOpen] = useState<boolean>(false);
   const [isFutebolOpen, setIsFutebolOpen] = useState<boolean>(false);
 
+  // Referências para os dropdowns
+  const esportesRef = useRef<HTMLDivElement>(null);
+  const futebolRef = useRef<HTMLDivElement>(null);
+
   const toggleMenu = (): void => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -31,6 +35,29 @@ const Header: React.FC = () => {
     setIsFutebolOpen(!isFutebolOpen);
   };
 
+  // Fechar os dropdowns ao clicar fora
+  const handleClickOutside = (event: MouseEvent): void => {
+    if (
+      esportesRef.current &&
+      !esportesRef.current.contains(event.target as Node)
+    ) {
+      setIsEsportesOpen(false);
+    }
+    if (
+      futebolRef.current &&
+      !futebolRef.current.contains(event.target as Node)
+    ) {
+      setIsFutebolOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
     <>
       <header className="header">
@@ -41,7 +68,7 @@ const Header: React.FC = () => {
           </Link>
         </div>
         <div className="header__center">
-          <div className="dropdown">
+          <div className="dropdown" ref={esportesRef}>
             <button className="dropdown-button" onClick={toggleEsportes}>
               Esportes <FiChevronDown size={14} />
             </button>
@@ -57,7 +84,7 @@ const Header: React.FC = () => {
               </a>
             </div>
           </div>
-          <div className="dropdown">
+          <div className="dropdown" ref={futebolRef}>
             <button className="dropdown-button" onClick={toggleFutebol}>
               Futebol <FiChevronDown size={14} />
             </button>
@@ -102,6 +129,10 @@ const Header: React.FC = () => {
         className={`menu-overlay ${isMenuOpen ? "active" : ""}`}
         onClick={toggleMenu}
       ></div>
+
+      <nav className={`menu-hamburger ${isMenuOpen ? "open" : ""}`}>
+        {/* Itens do menu */}
+      </nav>
 
       {/* Menu hamburguer */}
       <nav className={`menu-hamburger ${isMenuOpen ? "open" : ""}`}>
